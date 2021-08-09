@@ -4,3 +4,11 @@
     box-sizing: border-box;
   
 }
+
+
+/* Fonts */
+@font-face {
+    font-family: "Dosis";
+    src: local("Dosis"),
+        url("./assets/fonts/Dosis/Dosis-VariableFont_wght.ttf") format("truetype");
+}
