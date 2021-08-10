@@ -19,13 +19,58 @@ body {
 
 }
 
+@keyframes slideOut {
+    from {
+        transform: translateX(-100%);
 
+    }
+
+    to {
+        transform: translateX(0%);
+
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform : translateX(0%);
+
+
+    }
+
+    to {
+        transform : translateX(-100%);
+
+
+    }
+}
+
+.slideOut {
+
+    animation-name    : slideOut;
+    animation-duration: 1s;
+}
+
+.slideIn {
+    animation-name    : slideIn;
+    animation-duration: 1s;
+    transform : translateX(-100%) !important;
+
+}
+
+.hidden {
+    display: none;
+}
 
 .burger {
-    margin          : 30px 0 0 30px;
-    width           : 50px;
-    height          : 50px;
-    background-image: url('../assets/images/icons/burger.svg');
+    margin           : 30px 0 0 30px;
+    width            : 40px;
+    height           : 35px;
+    position         : absolute;
+    background-size  : 40px;
+    background-repeat: no-repeat;
+    background-image : url('../assets/images/icons/burger.svg');
+
 }
 
 .sideNavigation {
@@ -33,6 +78,8 @@ body {
     position        : absolute;
     background-color: black;
     height          : 100vh;
+    width           : 200px;
+    transform       : translateX(0%);
 
 
     &>.close {
@@ -47,20 +94,55 @@ body {
 
     li {
         margin: 10px 30px;
+        border-bottom: 0.5px solid rgb(87, 87, 87);
 
         a {
             font-weight       : 600;
-            background-image  : linear-gradient(0, rgb(0, 0, 0), rgb(255, 255, 255), rgb(92, 92, 92)) !important;
-            background-clip   : text;
-            color             : transparent !important;
-            -webkit-transition: background-position 0.5s ease-in-out;
-            transition        : background-position 0.5s ease-in-out;
+            font-size         : 20px;
+            -webkit-transition: all 0.3s;
+            -moz-transition   : all 0.3s;
+            -o-transition     : all 0.3s;
+            transition        : all 0.3s;
+            margin: 5px 0px ;
+
+            background : none;
+            color      : #fff;
+            display    : block;
+            font-weight: bold;
+            position   : relative;
+
+            &::before {
+                background: #fff;
+                content   : '';
+                position  : absolute;
+                z-index   : -1;
+            }
+
+            &::after {
+                height            : 100%;
+                left              : 0;
+                top               : 0;
+                width             : 0;
+                -webkit-transition: all 0.3s;
+                -moz-transition   : all 0.3s;
+                -o-transition     : all 0.3s;
+                transition        : all 0.3s;
+                background        : #fff;
+                content           : '';
+                position          : absolute;
+                z-index           : -1;
+            }
 
             &:hover {
-                background-position: 0px -20px;
-                // background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255)) !important;
-                // background-clip : text;
-                // color           : transparent !important;
+                color: #000000 !important;
+            }
+
+            &:hover:after {
+                width             : 100%;
+                -webkit-transition: all 0.3s;
+                -moz-transition   : all 0.3s;
+                -o-transition     : all 0.3s;
+                transition        : all 0.3s;
             }
         }
     }
@@ -116,5 +198,7 @@ body {
         padding   : 0;
         margin-top: 20px;
     }
+
+
 
 }

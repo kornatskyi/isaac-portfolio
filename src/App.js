@@ -32,16 +32,12 @@ function useWindowSize() {
 
 function Navbar(params) {
   const [isNavToggled, setIsNavToggled] = useState(false)
-  console.log();
-  if (useWindowSize()[0] > 768) {
+
+  if (useWindowSize()[0] < 768) {
     return (
-      <ul className="navBar">{params.links}</ul>
-    )
-  } else {
-    if (isNavToggled) {
-      return (
-        <div className="sideNavigation  ">
-          <div className="button close"  onClick={(e) => {
+      <div>
+        <div className={isNavToggled ? "sideNavigation slideOut" : "sideNavigation slideIn"}>
+          <div className="button close" onClick={(e) => {
             e.preventDefault()
             setIsNavToggled(false)
 
@@ -52,22 +48,23 @@ function Navbar(params) {
 
         </div>
 
-      )
-    }
-    else {
-      return (
-        <div className="burger button"  onClick={(e) => {
+
+        <div className="burger button" onClick={(e) => {
           e.preventDefault();
           setIsNavToggled(true)
 
         }} ></div>
+      </div >
 
-      )
-    }
-
+    )
+  } else {
+    return (
+      <ul className="navBar">{params.links}</ul>
+    )
   }
 
 }
+
 
 const getLinksWithParams = (params, label) => {
   return params.map((param, i) => {
@@ -85,13 +82,13 @@ export default function App() {
 
       <Router>
         <div>
-            <Navbar links={getLinksWithParams([{
-              style: { color: color }, onClick: () => setColor("white"), to: "/home"
-            }, {
-              style: { color: color }, onClick: () => setColor("black"), to: "/about"
-            }, {
-              style: { color: color }, onClick: () => setColor("black"), to: "/contacts"
-            }], ["Home", "About", "Contacts"])} />
+          <Navbar links={getLinksWithParams([{
+            style: { color: color }, onClick: () => setColor("white"), to: "/home"
+          }, {
+            style: { color: color }, onClick: () => setColor("black"), to: "/about"
+          }, {
+            style: { color: color }, onClick: () => setColor("black"), to: "/contacts"
+          }], ["Home", "About", "Contacts"])} />
 
 
           <Switch>
