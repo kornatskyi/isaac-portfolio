@@ -1,5 +1,9 @@
 @import "./_variables.scss";
 
+a {
+    color: $dark_font_color;
+    text-decoration: none;
+}
 
 body {
 
@@ -7,5 +11,20 @@ body {
     margin     : 0;
     padding    : 0;
 
+}
+
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    margin-left: 50px ;
+    margin-top: 50px;
+}
+.navBar > li {
+    
+    list-style: none;
+    
 }
 

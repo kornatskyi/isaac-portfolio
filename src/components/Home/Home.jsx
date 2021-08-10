@@ -3,22 +3,20 @@ import "./Home.scss";
 import video from "../../assets/videos/background.webm";
 import data from "../../data.json";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div className="container">
-    {/* autoPlay */}
-        <video  muted loop className="videoBackground">
-          <source src={video} type="video/mp4" />
-        </video>
+      {/* autoPlay */}
+      <video  muted loop className="videoBackground">
+        <source src={video} type="video/mp4" />
+      </video>
 
-        <div className="navigation">
-          <a href="" className="about"></a>
-          
-        </div>
-        <div className="nameContainer">
-          <h1 className="name">{data.name}</h1>
-        </div>
-
+      <div className="navigation">
+        <a href="" className="about"></a>
+      </div>
+      <div className="nameContainer">
+        <h1 className="name h1">{data.name}</h1>
+      </div>
     </div>
   );
 }
