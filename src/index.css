@@ -8,7 +8,28 @@
 
 /* Fonts */
 @font-face {
-    font-family: "Dosis";
-    src: local("Dosis"),
-        url("./assets/fonts/Dosis/Dosis-VariableFont_wght.ttf") format("truetype");
+    font-family: "DosisLight";
+    src: local("DosisLight"),
+        url("./assets/fonts/Dosis/static/Dosis-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "DosisMedium";
+    src: local("DosisMedium"),
+        url("./assets/fonts/Dosis/static/Dosis-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "DosisSemiBold";
+    src: local("DosisSemiBold"),
+        url("./assets/fonts/Dosis/static/Dosis-Bold.ttf") format("truetype");
+}
+
+
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+
 }

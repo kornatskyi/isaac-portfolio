@@ -2,22 +2,28 @@
 
 
 .container {
-  color:$light_font_color;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  .videoBackground {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-  }
-  .name {
+  width : 100%;
+  height: 2000px;
+  color: $light_font_color;
 
-    justify-self: center;
+  .videoBackground {
+    position  : absolute;
+    right     : 0;
+    bottom    : 0;
+    min-width : 100%;
+    height    : 100vh;
+    object-fit: cover;
+    z-index   : -1;
   }
+
+  .nameContainer {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   
+  }
+
+
 }
