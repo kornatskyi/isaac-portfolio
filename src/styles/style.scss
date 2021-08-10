@@ -1,7 +1,8 @@
 @import "./_variables.scss";
+@import "_mixins.scss";
 
 a {
-    color: $dark_font_color;
+    color          : $dark_font_color;
     text-decoration: none;
 }
 
@@ -13,18 +14,107 @@ body {
 
 }
 
+.button {
+    cursor: pointer;
+
+}
+
+
+
+.burger {
+    margin          : 30px 0 0 30px;
+    width           : 50px;
+    height          : 50px;
+    background-image: url('../assets/images/icons/burger.svg');
+}
+
+.sideNavigation {
+    z-index         : 999;
+    position        : absolute;
+    background-color: black;
+    height          : 100vh;
+
+
+    &>.close {
+        color       : white;
+        font-size   : 40px;
+        height      : auto;
+        width       : auto;
+        text-align  : end;
+        margin-right: 10px;
+        position    : relative;
+    }
+
+    li {
+        margin: 10px 30px;
+
+        a {
+            font-weight       : 600;
+            background-image  : linear-gradient(0, rgb(0, 0, 0), rgb(255, 255, 255), rgb(92, 92, 92)) !important;
+            background-clip   : text;
+            color             : transparent !important;
+            -webkit-transition: background-position 0.5s ease-in-out;
+            transition        : background-position 0.5s ease-in-out;
+
+            &:hover {
+                background-position: 0px -20px;
+                // background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255)) !important;
+                // background-clip : text;
+                // color           : transparent !important;
+            }
+        }
+    }
+
+    //transition to
+
+}
+
 
 .navBar {
-    display: flex;
-    flex-direction: row;
+    display        : flex;
+    flex-direction : row;
     justify-content: space-between;
-    width: 300px;
-    margin-left: 50px ;
-    margin-top: 50px;
-}
-.navBar > li {
-    
-    list-style: none;
-    
+    width          : 300px;
+    margin-left    : 50px;
+    margin-top     : 50px;
 }
 
+.navBar>li {
+
+    list-style: none;
+
+
+}
+
+
+.footer {
+    position        : absolute;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    background-color: black;
+    height          : 100px;
+    color           : white;
+    width           : 100%;
+
+    nav {
+        padding: 0;
+        margin : 30px 0 0 0;
+
+        & * {
+            padding: 0;
+            margin : 0;
+        }
+
+        a {
+            color: white;
+        }
+    }
+
+    .copyright {
+        color     : white;
+        padding   : 0;
+        margin-top: 20px;
+    }
+
+}

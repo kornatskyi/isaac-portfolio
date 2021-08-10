@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+/* eslint-disable no-script-url */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState, useLayoutEffect } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,32 +12,88 @@ import {
 import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contacts from './components/Contacts/Contacts.jsx'
+import Footer from './components/Footer.jsx';
 
+
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  return size;
+}
+
+
+
+function Navbar(params) {
+  const [isNavToggled, setIsNavToggled] = useState(false)
+  console.log();
+  if (useWindowSize()[0] > 768) {
+    return (
+      <ul className="navBar">{params.links}</ul>
+    )
+  } else {
+    if (isNavToggled) {
+      return (
+        <div className="sideNavigation  ">
+          <div className="button close"  onClick={(e) => {
+            e.preventDefault()
+            setIsNavToggled(false)
+
+          }}>X</div>
+          <ul>
+            {params.links}
+          </ul>
+
+        </div>
+
+      )
+    }
+    else {
+      return (
+        <div className="burger button"  onClick={(e) => {
+          e.preventDefault();
+          setIsNavToggled(true)
+
+        }} ></div>
+
+      )
+    }
+
+  }
+
+}
+
+const getLinksWithParams = (params, label) => {
+  return params.map((param, i) => {
+    return <li key={i}><Link key={i} {...param} >{label[i]}</Link></li>
+  })
+}
 
 
 export default function App() {
   const [color, setColor] = useState("white")
+
   return (
     <div>
 
+
       <Router>
         <div>
-          <nav>
-            <ul className="navBar">
-              <li >
-                <Link style={{ color: color }} onClick={() => setColor("white")} to="/">Home</Link>
-              </li>
-              <li >
-                <Link style={{ color: color }} onClick={() => setColor("black")} to="/about">About</Link>
-              </li>
-              <li >
-                <Link style={{ color: color }} onClick={() => setColor("black")} to="/contacts">Contacts</Link>
-              </li>
-            </ul>
-          </nav>
+            <Navbar links={getLinksWithParams([{
+              style: { color: color }, onClick: () => setColor("white"), to: "/home"
+            }, {
+              style: { color: color }, onClick: () => setColor("black"), to: "/about"
+            }, {
+              style: { color: color }, onClick: () => setColor("black"), to: "/contacts"
+            }], ["Home", "About", "Contacts"])} />
 
-          {/* A <Switch> looks through its children <Route>s and
-                renders the first one that matches the current URL. */}
+
           <Switch>
             <Route path="/about">
               <About />
@@ -48,6 +106,15 @@ export default function App() {
             </Route>
           </Switch>
         </div>
+
+
+        <Footer links={getLinksWithParams([{
+          onClick: () => setColor("white"), to: "/home"
+        }, {
+          onClick: () => setColor("black"), to: "/about"
+        }, {
+          onClick: () => setColor("black"), to: "/contacts"
+        }], ["Home", "About", "Contacts"])} />
       </Router>
 
     </div>

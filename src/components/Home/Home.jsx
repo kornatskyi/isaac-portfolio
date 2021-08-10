@@ -11,9 +11,7 @@ export default function Home(props) {
         <source src={video} type="video/mp4" />
       </video>
 
-      <div className="navigation">
-        <a href="" className="about"></a>
-      </div>
+
       <div className="nameContainer">
         <h1 className="name h1">{data.name}</h1>
       </div>
