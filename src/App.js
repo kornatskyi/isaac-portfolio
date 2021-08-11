@@ -30,8 +30,9 @@ function useWindowSize() {
 
 
 
-function Navbar(params) {
-  const [isNavToggled, setIsNavToggled] = useState(false)
+function Navbar(props) {
+
+  const {isNavToggled, setIsNavToggled} = {...props}
 
   if (useWindowSize()[0] < 768) {
     return (
@@ -43,7 +44,7 @@ function Navbar(params) {
 
           }}>X</div>
           <ul>
-            {params.links}
+            {props.links}
           </ul>
 
         </div>
@@ -59,7 +60,7 @@ function Navbar(params) {
     )
   } else {
     return (
-      <ul className="navBar">{params.links}</ul>
+      <ul className="navBar">{props.links}</ul>
     )
   }
 
@@ -75,6 +76,7 @@ const getLinksWithParams = (params, label) => {
 
 export default function App() {
   const [color, setColor] = useState("white")
+  const [isNavToggled, setIsNavToggled] = useState(false)
 
   return (
     <div>
@@ -88,7 +90,8 @@ export default function App() {
             style: { color: color }, onClick: () => setColor("black"), to: "/about"
           }, {
             style: { color: color }, onClick: () => setColor("black"), to: "/contacts"
-          }], ["Home", "About", "Contacts"])} />
+          }], ["Home", "About", "Contacts"])} isNavToggled={isNavToggled}
+            setIsNavToggled={setIsNavToggled} />
 
 
           <Switch>
