@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import './NavBar.scss'
 
 /**
  * Hook that alerts clicks outside of the passed ref
