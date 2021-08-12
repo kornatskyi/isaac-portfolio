@@ -41,10 +41,10 @@ function NavBar(props) {
     <div className="navbar" ref={wrapperRef}>
       <div className="burger" onClick={toggleSideBar}></div>
       <div id="links" className={`links ${toggleClass}`}>
-        <div className="close" onClick={toggleSideBar}></div>
         {pageNames.map((pageName, i) => {
           return (
             <Link
+            className=""
               key={i}
               onClick={toggleSideBar}
               to={pageName.replace(/\W/g, "").toLowerCase()}
@@ -53,6 +53,8 @@ function NavBar(props) {
             </Link>
           );
         })}
+        <div className="close" onClick={toggleSideBar}></div>
+
       </div>
     </div>
   );
