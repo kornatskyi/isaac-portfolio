@@ -1,12 +1,13 @@
-/* eslint-disable no-script-url */
-/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React, { useState, useLayoutEffect } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar.jsx";
+
+
+import NavBar from './components/Navbar/NavBar.jsx';
 
 
 import Home from './components/Home/Home.jsx'

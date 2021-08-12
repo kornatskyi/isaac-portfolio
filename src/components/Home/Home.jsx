@@ -7,7 +7,7 @@ export default function Home(props) {
   return (
     <div className="container">
       {/* autoPlay */}
-      <video  muted loop className="videoBackground">
+      <video  muted  loop className="videoBackground">
         <source src={video} type="video/mp4" />
       </video>
 

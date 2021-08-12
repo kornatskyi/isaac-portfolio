@@ -1,7 +1,7 @@
 @import '../../styles/mixins';
 
-
-@media (max-width: 767px) {
+//For small screens
+@include mdDown {
     .navbar {
 
 
@@ -43,7 +43,7 @@
                 height           : 30px;
                 margin-right     : auto;
                 margin-left      : 30px;
-                margin-bottom: 10px;
+                margin-bottom    : 10px;
                 cursor           : pointer;
                 background-image : url("../../assets/images/icons/times-solid.svg");
                 background-repeat: no-repeat;
@@ -104,7 +104,10 @@
 }
 
 
-@media (min-width: 768px) {
+//For big screens
+
+
+@include mdUp {
     .navbar {
         padding-top: 30px;
 
@@ -112,9 +115,9 @@
             width          : 35%;
             display        : flex;
             justify-content: space-between;
-            margin-left: auto;
-            margin-right: 5%;
-            
+            margin-left    : auto;
+            margin-right   : 5%;
+
             .close {
                 display: none;
             }
