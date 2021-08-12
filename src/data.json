@@ -1,3 +1,29 @@
 {
-    "name": "Isaac Waggoner"
+    "name": "Isaac Waggoner",
+    "projects" : [
+        {
+            "name" : "Chain Reaction",
+            "embed": "<iframe title=\"vimeo-player\" src=\"https://player.vimeo.com/video/284758825?h=4a6aff3f52\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen></iframe>",
+            "description":"",
+            "img" : "719285954_640x360.jpeg"
+        },
+        {
+            "name" : "David and Hannah 2019",
+            "embed": "<iframe title=\"vimeo-player\" src=\"https://player.vimeo.com/video/308134792?h=dbf290e3ff\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen></iframe>",
+            "description":"",
+            "img" : "733393503_640x360.jpeg"
+        },
+        {
+            "name" : "Earthly",
+            "embed": "<iframe title=\"vimeo-player\" src=\"https://player.vimeo.com/video/374043587?h=d2b0e1647b\" width=\"640\" height=\"267\" frameborder=\"0\" allowfullscreen></iframe>",
+            "description":"",
+            "img" : "748241451_640x360.jpeg"
+        },
+        {
+            "name" : "Out of My Mind",
+            "embed": "<iframe title=\"vimeo-player\" src=\"https://player.vimeo.com/video/296072500?h=52a72dd375\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen></iframe>",
+            "description":"",
+            "img" : "832364774_640x360.jpeg"
+        }
+    ]
 }

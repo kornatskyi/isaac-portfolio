@@ -9,7 +9,7 @@ import {
 
 import NavBar from './components/Navbar/NavBar.jsx';
 
-
+import Project from './components/Project/Project.jsx';
 import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contacts from './components/Contacts/Contacts.jsx'
@@ -36,6 +36,9 @@ export default function App() {
             </Route>
             <Route path="/contacts">
               <Contacts />
+            </Route>
+            <Route path="/project" >
+              <Project />
             </Route>
             <Route path="/">
               <Home />

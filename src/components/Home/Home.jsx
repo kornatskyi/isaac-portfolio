@@ -2,18 +2,39 @@ import React from "react";
 import "./Home.scss";
 import video from "../../assets/videos/background.webm";
 import data from "../../data.json";
+import { Link } from "react-router-dom";
+
+const getImgPath = (imgName) => {
+  return require("../../assets/images/projects/" + imgName).default;
+};
 
 export default function Home(props) {
+  function createMarkup(project) {
+    return { __html: project.embed };
+  }
   return (
     <div className="container">
       {/* autoPlay */}
-      <video  muted  loop className="videoBackground">
-        <source src={video} type="video/mp4" />
-      </video>
+      <div className="mainSection">
+        <video muted loop className="videoBackground">
+          <source src={video} type="video/mp4" />
+        </video>
 
-
-      <div className="nameContainer">
-        <h1 className="name h1">{data.name}</h1>
+        <div className="nameContainer">
+          <h1 className="name h1">{data.name}</h1>
+        </div>
+      </div>
+      <div className="projectsContainer">
+        {data.projects.map((project, i) => {
+          return (
+            <div key={i} className="project">
+              <Link href="" to="project">
+                <h4>{project.name}</h4>
+              </Link>
+              <img src={getImgPath(project.img)} alt="" />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
