@@ -13,7 +13,7 @@ import Project from './components/Project/Project.jsx';
 import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contacts from './components/Contacts/Contacts.jsx'
-import Footer from './components/Footer.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 
 
@@ -47,13 +47,7 @@ export default function App() {
         </div>
 
 
-        {/* <Footer links={getLinksWithParams([{
-          onClick: () => setColor("white"), to: "/home"
-        }, {
-          onClick: () => setColor("black"), to: "/about"
-        }, {
-          onClick: () => setColor("black"), to: "/contacts"
-        }], ["Home", "About", "Contacts"])} /> */}
+        <Footer pageNames={["Home", "About", "Contacts"]} />
       </Router>
 
     </div>

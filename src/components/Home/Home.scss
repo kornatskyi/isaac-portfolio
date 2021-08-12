@@ -34,17 +34,9 @@
     }
   }
 
-  .projectsContainer {
-    display              : grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows   : 1fr 1fr;
-    gap                  : 0px 0px;
-    grid-template-areas  :
-      ". ."
-      ". .";
-    width : 100%;
-    height: 100%;
 
+  //Projects section
+  .projectsContainer {
     .project {
 
       width         : 90%;
@@ -63,9 +55,45 @@
         width       : 100%;
         height      : auto;
         justify-self: center;
-      }
 
+      }
     }
   }
 
+  @include mdUp {
+
+    .projectsContainer {
+      display              : grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows   : 1fr 1fr;
+      gap                  : 0px 0px;
+      grid-template-areas  :
+        ". ."
+        ". .";
+      margin   : auto;
+      max-width: 1400px;
+      width    : 100%;
+      height   : 100%;
+
+      .project {
+        max-width: 600px;
+      }
+    }
+
+  }
+
+  @include mdDown {
+
+    .projectsContainer {
+      display       : flex;
+      flex-direction: column;
+      width         : 100%;
+      height        : 100%;
+      align-items   : center;
+
+      .project {
+        max-width: 550px;
+      }
+    }
+  }
 }
