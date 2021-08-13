@@ -13,7 +13,7 @@ export default function Footer(props) {
             <Link
             className=""
               key={i}
-              to={pageName.replace(/\W/g, "").toLowerCase()}
+              to={"/" + pageName.replace(/\W/g, "").toLowerCase()}
             >
               {pageName}
             </Link>

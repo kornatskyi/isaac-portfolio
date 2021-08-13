@@ -17,10 +17,12 @@
 
 padding: 0 25px;
     .pageTitle {
-        margin: 70px auto;
+        margin: 70px auto 20px auto;
+
 
         @include h1;
     }
+
 
     .body {
         align-self: center;

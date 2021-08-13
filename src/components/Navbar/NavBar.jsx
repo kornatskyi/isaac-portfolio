@@ -47,7 +47,7 @@ function NavBar(props) {
             className="nav-link"
               key={i}
               onClick={toggleSideBar}
-              to={pageName.replace(/\W/g, "").toLowerCase()}
+              to={"/" +pageName.replace(/\W/g, "").toLowerCase()}
             >
               {pageName}
             </Link>

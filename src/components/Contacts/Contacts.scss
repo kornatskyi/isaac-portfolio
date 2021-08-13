@@ -1,11 +1,139 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+
 .contactsContainer {
 
+    display       : flex;
+    flex-direction: column;
+    max-width     : $max-width - 200px;
+    margin        : auto;
 
-display: flex;
-flex-direction: column;
-.body {
-    display: flex;
-    
+    .pageTitle {
+        margin: 70px auto 20px auto;
+
+        @include h1;
+    }
+
+    svg {
+        margin   : 5px;
+        min-width: 20px;
+        height   : 20px;
+    }
+
+    a {
+        margin     : 5px;
+        display    : flex;
+        align-items: center;
+
+    }
+
+    .body {
+        margin: 0 40px;
+    }
+
+    .contacts {
+        display       : flex;
+        flex-direction: column;
+    }
+
+    .media {
+        display       : flex;
+        flex-direction: column;
+    }
+
+    p {
+        text-align: center;
+        margin    : 10px 0;
+        @include h5;
+    }
+
+    form {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        & > * {
+            margin: 5px 0;
+        }
+        input {
+            border: 1px solid black;
+            border-radius: 6px;
+            resize: none;
+            height: 40px;
+            padding: 5px;
+        }
+
+        textarea {
+            border: 1px solid black;
+            border-radius: 6px;
+            resize: none;
+            height: 150px;
+            padding: 5px;
+
+            
+        }
+
+        input[type="submit"] {
+            background-color: black;
+            color: white;
+            max-width: 150px;
+        }
+
+
+    }
+
+
 }
+
+
+@include mdUp {
+    .contactsContainer {
+
+
+   
+        .body {
+            display       : flex;
+            flex-direction: row;
+
+            .contactsColumn {
+                width: 50%;
+            }
+
+            .formColumn {
+                width: 50%;
+            }
+        }
+
+    }
+}
+
+
+@include mdDown {
+    .contactsContainer {
+
+
+
+
+
+        .body {
+            display       : flex;
+            flex-direction: column;
+            align-items   : center;
+
+            .contactsColumn {
+width: 100%;
+    
+
+            }
+
+            .formColumn {
+                width: 100%;
+
+
+               
+            }
+        }
+
+    }
 
 }

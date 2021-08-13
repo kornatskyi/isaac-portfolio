@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link
 } from "react-router-dom";
 
 
@@ -18,8 +19,9 @@ import Footer from './components/Footer/Footer.jsx';
 
 
 
+
+
 export default function App() {
-  const [color, setColor] = useState("white")
 
   return (
     <div className='appContainer'>
@@ -29,8 +31,10 @@ export default function App() {
         <div className="mainContainer">
 
           <NavBar pageNames={["Home", "About", "Contacts"]} />
-
           <Switch>
+            <Route exact path="/home">
+              <Home />
+            </Route>
             <Route path="/about">
               <About />
             </Route>
@@ -40,9 +44,7 @@ export default function App() {
             <Route path="/project" >
               <Project />
             </Route>
-            <Route path="/">
-              <Home />
-            </Route>
+
           </Switch>
         </div>
 
