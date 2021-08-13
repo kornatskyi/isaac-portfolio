@@ -2,7 +2,7 @@
 @import "../../styles/mixins";
 
 
-.container {
+.homeContainer {
   width: 100%;
 
   color: $light_font_color;
@@ -24,13 +24,9 @@
     }
 
     .nameContainer {
-      position       : absolute;
-      bottom         : 100px;
-      display        : flex;
-      justify-content: center;
-      width          : 100%;
-      text-align     : center;
-
+      position  : relative;
+      bottom    : 250px;
+      text-align: center;
     }
   }
 
@@ -71,7 +67,7 @@
         ". ."
         ". .";
       margin   : auto;
-      max-width: 1400px;
+      max-width: $max-width;
       width    : 100%;
       height   : 100%;
 

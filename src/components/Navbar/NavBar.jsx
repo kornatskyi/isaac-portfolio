@@ -44,7 +44,7 @@ function NavBar(props) {
         {pageNames.map((pageName, i) => {
           return (
             <Link
-            className=""
+            className="nav-link"
               key={i}
               onClick={toggleSideBar}
               to={pageName.replace(/\W/g, "").toLowerCase()}

@@ -1,0 +1,38 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+
+
+
+.aboutContainer {
+    //This padding prevent from margin collapse(some bug)
+
+
+    display       : flex;
+    flex-direction: column;
+    margin        : auto;
+    padding       : 0.05px;
+
+    max-width: $max-width - 300px;
+
+padding: 0 25px;
+    .pageTitle {
+        margin: 70px auto;
+
+        @include h1;
+    }
+
+    .body {
+        align-self: center;
+        h5 {
+            padding-left: 15px;
+            margin-top: 10px;
+            @include h5;
+
+        }
+        p {
+            @include p;
+        }
+    }
+
+}

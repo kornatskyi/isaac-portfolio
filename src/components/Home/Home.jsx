@@ -1,19 +1,30 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./Home.scss";
 import video from "../../assets/videos/background.webm";
 import data from "../../data.json";
 import { Link } from "react-router-dom";
+
+import { addRule } from "../../utils/utilFunctions";
 
 const getImgPath = (imgName) => {
   return require("../../assets/images/projects/" + imgName).default;
 };
 
 export default function Home(props) {
-  function createMarkup(project) {
-    return { __html: project.embed };
-  }
+
+
+  //Change nav links color
+  useEffect(() => {
+    addRule('.nav-link:after', {
+      'border-color': 'white !important'
+    })
+    addRule('.nav-link', {
+      'color': 'white !important'
+    })
+}, []);
+
   return (
-    <div className="container">
+    <div className="homeContainer">
       {/* autoPlay */}
       <div className="mainSection">
         <video muted loop className="videoBackground">

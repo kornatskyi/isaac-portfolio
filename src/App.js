@@ -22,11 +22,11 @@ export default function App() {
   const [color, setColor] = useState("white")
 
   return (
-    <div>
+    <div className='appContainer'>
 
 
       <Router>
-        <div>
+        <div className="mainContainer">
 
           <NavBar pageNames={["Home", "About", "Contacts"]} />
 
