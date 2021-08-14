@@ -1,9 +1,7 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-
 .contactsContainer {
-
     display       : flex;
     flex-direction: column;
     max-width     : $max-width - 200px;
@@ -11,7 +9,6 @@
 
     .pageTitle {
         margin: 70px auto 20px auto;
-
         @include h1;
     }
 
@@ -25,7 +22,6 @@
         margin     : 5px;
         display    : flex;
         align-items: center;
-
     }
 
     .body {
@@ -49,48 +45,72 @@
     }
 
     form {
-        margin: auto;
-        display: flex;
+        margin        : auto;
+        display       : flex;
         flex-direction: column;
-        & > * {
+
+        &>* {
             margin: 5px 0;
         }
+
         input {
-            border: 1px solid black;
+            border       : 1px solid black;
             border-radius: 6px;
-            resize: none;
-            height: 40px;
-            padding: 5px;
+            resize       : none;
+            height       : 40px;
+            padding      : 5px;
         }
 
         textarea {
-            border: 1px solid black;
+            border       : 1px solid black;
             border-radius: 6px;
-            resize: none;
-            height: 150px;
-            padding: 5px;
-
-            
+            resize       : none;
+            height       : 150px;
+            padding      : 5px;
         }
 
         input[type="submit"] {
             background-color: black;
-            color: white;
-            max-width: 150px;
+            color           : white;
+            max-width       : 150px;
+            cursor          : pointer;
+
+            &:hover {
+                transform       : scale(1.05);
+                border          : 2px solid black;
+                background-color: white;
+                color           : black;
+            }
+            &.sent {
+                background-color: rgb(87, 87, 87);
+                transform       : none;
+                border          : none;
+                background-color: none;
+                color           : white;
+                cursor: not-allowed;
+            }
+            &.sending {
+
+                background-color: rgb(87, 87, 87);
+                transform       : none;
+                border          : none;
+                background-color: none;
+                color           : white;
+                cursor: wait;
+
+            }
         }
+        .clue {
+            font-size: 13px;
+            text-align: start;
+            color: grey;
 
-
+        }
     }
-
-
 }
-
 
 @include mdUp {
     .contactsContainer {
-
-
-   
         .body {
             display       : flex;
             flex-direction: row;
@@ -103,37 +123,23 @@
                 width: 50%;
             }
         }
-
     }
 }
 
-
 @include mdDown {
     .contactsContainer {
-
-
-
-
-
         .body {
             display       : flex;
             flex-direction: column;
             align-items   : center;
 
             .contactsColumn {
-width: 100%;
-    
-
+                width: 100%;
             }
 
             .formColumn {
                 width: 100%;
-
-
-               
             }
         }
-
     }
-
 }
