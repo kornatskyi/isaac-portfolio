@@ -42,7 +42,10 @@ export default function Home(props) {
               <Link href="" to="project">
                 <h4>{project.name}</h4>
               </Link>
+              <div>
               <img src={getImgPath(project.img)} alt="" />
+
+              </div>
             </div>
           );
         })}

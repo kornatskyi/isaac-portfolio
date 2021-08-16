@@ -32,9 +32,7 @@ export default function App() {
 
           <NavBar pageNames={["Home", "About", "Contacts"]} />
           <Switch>
-            <Route exact path="/home">
-              <Home />
-            </Route>
+           
             <Route path="/about">
               <About />
             </Route>
@@ -43,6 +41,9 @@ export default function App() {
             </Route>
             <Route path="/project" >
               <Project />
+            </Route>
+            <Route  path="/">
+              <Home />
             </Route>
 
           </Switch>
