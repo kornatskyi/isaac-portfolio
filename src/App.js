@@ -28,21 +28,24 @@ export default function App() {
 
 
       <Router>
+
+        <header>
+          <NavBar pageNames={["Home", "About", "Contacts"]} />
+
+        </header>
         <div className="mainContainer">
 
-          <NavBar pageNames={["Home", "About", "Contacts"]} />
           <Switch>
-           
+
             <Route path="/about">
               <About />
             </Route>
             <Route path="/contacts">
               <Contacts />
             </Route>
-            <Route path="/project" >
-              <Project />
+            <Route path="/project" component={(props) => <Project {...props} someProp="helloProp" />} >
             </Route>
-            <Route  path="/">
+            <Route path="/">
               <Home />
             </Route>
 

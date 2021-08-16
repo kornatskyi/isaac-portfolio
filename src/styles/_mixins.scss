@@ -68,37 +68,38 @@
 //Fonts
 @mixin h6 {
     font-size  : 1rem;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 @mixin h5 {
     font-size  : 1.2rem;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 
 @mixin h4 {
     font-size  : 1.4rem;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 @mixin h3 {
     font-size  : 1.8rem;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 @mixin h2 {
     font-size  : 2.6rem;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 @mixin h1 {
     font-size  : 4.2rem;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 @mixin  p {
     font-size: 1rem;
+
     line-height: 1.5rem;
     
 }

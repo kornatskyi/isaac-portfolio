@@ -12,9 +12,10 @@
     width : 100%;
 
     .videoBackground {
-      position            : relative;
-      height              : 100%;
+      position            : absolute;
+      height              : 100vh;
       width               : 100%;
+      top                 : 0px;
       background-repeat   : no-repeat;
       // background-size  : contain;
       background-size     : cover;
@@ -24,9 +25,17 @@
     }
 
     .nameContainer {
-      position  : relative;
-      bottom    : 250px;
-      text-align: center;
+      height: 100vh;
+      width : 100%;
+      position: relative;
+      
+      .name {
+        position: absolute;
+        bottom: 200px;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+      }
     }
   }
 
@@ -49,16 +58,35 @@
       }
 
       div {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 0%, rgba(9, 9, 121, 0) 100%, rgba(0, 0, 0, 1) 100%);
-
-        &:hover {
+        position: relative;
 
 
+        .top {
+          position        : absolute;
+          background-color: rgba(0, 0, 0, 0.5);
+          height          : 0;
+          width           : 100%;
+          top             : 0px;
+        }
 
-          animation         : projectHover;
-          animation-duration: 1s;
+        .bottom {
+          position        : absolute;
+          background-color: rgba(0, 0, 0, 0.5);
+          height          : 30px;
+          width           : 100%;
+          bottom          : 5px;
+
+
+
+
+          p {
+            position: relative;
+            color   : rgb(218, 218, 218);
+          }
 
         }
+
+        &:hover {}
 
 
         img {
@@ -69,26 +97,10 @@
           z-index     : -1;
         }
       }
- 
-    }
-  }
-
-
-  @keyframes projectHover {
-
-    0% {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 0%, rgba(9, 9, 121, 0) 100%, rgba(0, 0, 0, 1) 100%);
-    }
-
-    50% {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 7%, rgba(9, 9, 121, 0) 92%, rgba(0, 0, 0, 1) 100%);
-
-    }
-    100% {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 15%, rgba(9, 9, 121, 0) 85%, rgba(0, 0, 0, 1) 100%);
 
     }
   }
+
 
   @include mdUp {
 

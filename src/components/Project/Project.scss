@@ -1,0 +1,71 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/mixins";
+
+
+.projectContainer {
+    display       : flex;
+    flex-direction: column;
+    max-width     : $max-width - 200px;
+    margin        : 30px auto;
+
+
+    .title {
+        margin: 20px 30px;
+    }
+
+    .videoContainer {
+        display        : flex;
+        justify-content: center;
+
+
+
+
+
+
+
+
+
+        @include xsUp {
+
+            iframe {
+                width : 100vw;
+                height: 230px;
+
+            }
+
+        }
+
+        @include smUp {
+
+            iframe {
+                width : 100vw;
+                height: 300px;
+
+            }
+
+        }
+
+        @include mdUp {
+
+            iframe {
+                width : 100vw;
+                height: 400px;
+
+            }
+
+        }
+
+        @include lgUp {
+
+            iframe {
+                width : 100vw;
+                height: 600px;
+
+            }
+        }
+    }
+
+    .projectDescription {
+        margin: 20px;
+    }
+}
