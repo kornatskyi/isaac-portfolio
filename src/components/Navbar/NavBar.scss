@@ -13,17 +13,13 @@
             left               : 30px;
             // background-color: black;
             // background-image: url('../../assets/images//icons/burger.svg');
+            color              : white;
+            width              : 40px;
+            height             : 40px;
+            background-size    : contain;
+            background-repeat  : no-repeat;
 
-            width            : 40px;
-            height           : 40px;
-            background-size  : contain;
-            background-repeat: no-repeat;
 
-            @include burgerSvg("%23fff");
-
-            &:hover {
-                @include burgerSvg("%23a0a0a0");
-            }
 
 
         }

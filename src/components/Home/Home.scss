@@ -1,7 +1,6 @@
 @import "../../styles/_variables.scss";
 @import "../../styles/mixins";
 
-
 .homeContainer {
   width: 100%;
 
@@ -25,16 +24,18 @@
     }
 
     .nameContainer {
-      height: 100vh;
-      width : 100%;
+      height  : 100vh;
+      width   : 100%;
       position: relative;
-      
+
       .name {
-        position: absolute;
-        bottom: 200px;
-        width: 100%;
+        font-weight: 100;
+        letter-spacing: 5px;
+        position  : absolute;
+        bottom    : 150px;
+        width     : 100%;
         text-align: center;
-        padding: 10px;
+        padding   : 10px;
       }
     }
   }
@@ -69,21 +70,17 @@
           height          : 50px;
           width           : 100%;
           bottom          : 5px;
-          
+
 
           p {
-            color   : rgb(218, 218, 218);
+            color     : rgb(218, 218, 218);
             text-align: end;
-            margin: 10px;
+            margin    : 10px;
           }
 
         }
 
-        &:hover {
-
-
-        
-        }
+        &:hover {}
 
 
         img {

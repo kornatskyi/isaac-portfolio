@@ -19,13 +19,15 @@ export default function Home(props) {
     addRule(".nav-link", {
       color: "white !important",
     });
+    document.querySelector(".burger").style.color = "white";
+
   }, []);
 
   return (
     <div className="homeContainer">
       {/* autoPlay */}
       <div className="mainSection">
-        <video muted loop className="videoBackground">
+        <video muted  loop className="videoBackground">
           <source src={video} type="video/mp4" />
         </video>
         <div className="nameContainer">

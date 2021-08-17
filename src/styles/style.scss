@@ -1,6 +1,8 @@
 @import './classes.scss';
 @import "./_variables.scss";
 @import "_mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap');
+
 
 a {
     color          : $dark_font_color;
@@ -11,7 +13,9 @@ a {
 
 body {
 
-    font-family: 'DosisLight', 'san-serif';
+    // font-family: 'DosisLight', 'san-serif';
+    font-family: 'Tenali Ramakrishna', sans-serif;
+
     margin     : 0;
     padding    : 0;
     background-color: hsl(42, 90%, 99%);
@@ -22,7 +26,7 @@ body {
 
 header {
     @include mdUp {
-        height: 60px;
+        height: 80px;
 
     }
     @include mdDown {

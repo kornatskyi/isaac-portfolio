@@ -13,15 +13,7 @@ import {
 } from "react-icons/ai";
 
 export default function Contacts(props) {
-
-
-
-
-
-
-
-
-  const [forceUpdate, setForceUpdate] = useState("")
+  const [forceUpdate, setForceUpdate] = useState("");
   const [isSending, setIsSending] = useState(false);
   //Change nav links color
   useEffect(() => {
@@ -31,17 +23,16 @@ export default function Contacts(props) {
     addRule(".nav-link", {
       color: "black !important",
     });
+    document.querySelector(".burger").style.color = "black";
   }, []);
 
-
-  if(new Date().getTime() > parseInt(window.localStorage.sendingTime)) {
+  if (new Date().getTime() > parseInt(window.localStorage.sendingTime)) {
     window.localStorage.isSent = false;
   }
 
-
   function sendEmail(e) {
     e.preventDefault();
-    setIsSending(true)
+    setIsSending(true);
 
     emailjs
       .sendForm(
@@ -58,9 +49,7 @@ export default function Contacts(props) {
 
             //1s === 1000ms
             window.localStorage.sendingTime = new Date().getTime() + 10000;
-            setIsSending(false)
-
-
+            setIsSending(false);
           }
         },
         (error) => {
@@ -80,21 +69,34 @@ export default function Contacts(props) {
           <input type="email" name="user_email" />
           <label>Message</label>
           <textarea name="message" />
-          <input className="sent" type="submit" disabled value="Message's sent" />
-          <p className="clue">*You'll be able to send an another message after 5min</p>
+          <input
+            className="sent"
+            type="submit"
+            disabled
+            value="Message's sent"
+          />
+          <p className="clue">
+            *You'll be able to send an another message after 5min
+          </p>
         </form>
       );
     } else {
-      return (<form className="contact-form" onSubmit={sendEmail}>
-        <input type="hidden" name="contact_number" />
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        {isSending? <input className="sending" type="submit" value="Sending" /> : <input type="submit" value="Send" />}
-      </form>)
+      return (
+        <form className="contact-form" onSubmit={sendEmail}>
+          <input type="hidden" name="contact_number" />
+          <label>Name</label>
+          <input type="text" name="user_name" />
+          <label>Email</label>
+          <input type="email" name="user_email" />
+          <label>Message</label>
+          <textarea name="message" />
+          {isSending ? (
+            <input className="sending" type="submit" value="Sending" />
+          ) : (
+            <input type="submit" value="Send" />
+          )}
+        </form>
+      );
     }
   };
 
@@ -133,7 +135,7 @@ export default function Contacts(props) {
         </div>
         <div className="formColumn">
           <p>or just write me a message in the form below</p>
-        {safeForm()}
+          {safeForm()}
         </div>
       </div>
     </div>

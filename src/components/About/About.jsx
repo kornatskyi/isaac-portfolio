@@ -14,6 +14,7 @@ export default function About(props) {
     addRule(".nav-link", {
       color: "black !important",
     });
+    document.querySelector('.burger').style.color = "black";
   }, []);
 
   return (
