@@ -1,7 +1,6 @@
 @import './classes.scss';
 @import "./_variables.scss";
 @import "_mixins.scss";
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@283&display=swap');
 
 
 a {
@@ -13,8 +12,8 @@ a {
 
 body {
 
-    // font-family: 'DosisLight', 'san-serif';
-    font-family: 'Dosis', sans-serif;
+    font-family: 'DosisLight', 'san-serif';
+
     
     margin     : 0;
     padding    : 0;

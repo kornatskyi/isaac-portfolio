@@ -40,7 +40,10 @@ function NavBar(props) {
 
   return (
     <div className="navbar" ref={wrapperRef}>
-      <img src={burger} className="burger" onClick={toggleSideBar} alt="" />
+      <div className="burgerContainer"  onClick={toggleSideBar}>
+      <img src={burger} className="burger"  alt="" />
+
+      </div>
       <div id="links" className={`links ${toggleClass}`}>
         {pageNames.map((pageName, i) => {
           return (

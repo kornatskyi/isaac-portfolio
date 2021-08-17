@@ -12,8 +12,7 @@ import {
   AiOutlineMail,
 } from "react-icons/ai";
 
-export default function Contacts(props) {
-  const [forceUpdate, setForceUpdate] = useState("");
+export default function Contacts() {
   const [isSending, setIsSending] = useState(false);
   //Change nav links color
   useEffect(() => {

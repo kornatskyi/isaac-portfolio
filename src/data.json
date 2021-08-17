@@ -2,11 +2,12 @@
     "name": "Isaac Waggoner",
     "projects": [
         {
-            "name": "Chain Reaction",
-            "id": "284758825",
+            "name": "Isaac Waggoner Filmmaker’s Reel",
+            "id": "382091884",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitae.",
-            "img": "719285954_640x360.jpeg"
+            "img": "843099723_640x360.jpeg"
         },
+       
         {
             "name": "David and Hannah 2019",
             "id": "308134792",
@@ -24,7 +25,14 @@
             "id": "296072500",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitae.",
             "img": "733393503_640x360.jpeg"
+        },
+        {
+            "name": "Chain Reaction",
+            "id": "284758825",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitae.",
+            "img": "719285954_640x360.jpeg"
         }
+   
     ],
     "about": {
         "pageTitle": "About Me",

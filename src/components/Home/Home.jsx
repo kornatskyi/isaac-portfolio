@@ -25,9 +25,8 @@ export default function Home(props) {
 
   return (
     <div className="homeContainer">
-      {/* autoPlay */}
       <div className="mainSection">
-        <video muted  loop className="videoBackground">
+        <video muted autoPlay loop className="videoBackground">
           <source src={video} type="video/mp4" />
         </video>
         <div className="nameContainer">
