@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
 import { addRule } from "../../utils/utilFunctions";
 import data from "../../data.json";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import "./Project.scss";
 
 function Project() {
-  const location = useLocation();
-  const state = location.state;
-  const project = data.projects.find((project) => project.name === state.name);
+  const { name } = useParams();
+  const project = data.projects.find(
+    (project) => project.name.split(/[^A-Za-z]/).join("") === name
+  );
 
   //Change nav links color
   useEffect(() => {
@@ -21,7 +22,9 @@ function Project() {
   }, []);
 
   function createMarkup(project) {
-    return { __html: project.embed };
+    return {
+      __html: `<iframe src="https://player.vimeo.com/video/${project.id}"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`,
+    };
   }
   return (
     <div className="projectContainer">

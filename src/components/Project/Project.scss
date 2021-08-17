@@ -1,71 +1,110 @@
 @import "../../styles/_variables.scss";
 @import "../../styles/mixins";
 
+@include xsUp {
+    .projectContainer {
+        display       : flex;
+        flex-direction: column;
+        max-width     : $max-width - 200px;
+        margin        : 30px auto;
 
-.projectContainer {
-    display       : flex;
-    flex-direction: column;
-    max-width     : $max-width - 200px;
-    margin        : 30px auto;
+        .title {
+            margin: 20px 30px;
+        }
 
-
-    .title {
-        margin: 20px 30px;
-    }
-
-    .videoContainer {
-        display        : flex;
-        justify-content: center;
-
-
-
-
-
-
-
-
-
-        @include xsUp {
+        .videoContainer {
+            display        : flex;
+            justify-content: center;
 
             iframe {
                 width : 100vw;
                 height: 230px;
-
             }
-
         }
 
-        @include smUp {
+        .projectDescription {
+            margin: 20px;
+        }
+    }
+}
+
+@include smUp {
+    .projectContainer {
+        display       : flex;
+        flex-direction: column;
+        max-width     : $max-width - 200px;
+        margin        : 30px auto;
+
+        .title {
+            margin: 20px 30px;
+        }
+
+        .videoContainer {
+            display        : flex;
+            justify-content: center;
 
             iframe {
                 width : 100vw;
                 height: 300px;
-
             }
-
         }
 
-        @include mdUp {
+        .projectDescription {
+            margin: 20px;
+        }
+    }
+}
+
+@include mdUp {
+    .projectContainer {
+        display       : flex;
+        flex-direction: column;
+        max-width     : $max-width - 200px;
+        margin        : 30px auto;
+
+        .title {
+            margin: 20px 30px;
+        }
+
+        .videoContainer {
+            display        : flex;
+            justify-content: center;
 
             iframe {
                 width : 100vw;
                 height: 400px;
-
             }
-
         }
 
-        @include lgUp {
+        .projectDescription {
+            margin: 20px;
+        }
+    }
+}
+
+@include lgUp {
+    .projectContainer {
+        display       : flex;
+        flex-direction: column;
+        max-width     : $max-width - 200px;
+        margin        : 30px auto;
+
+        .title {
+            margin: 20px 30px;
+        }
+
+        .videoContainer {
+            display        : flex;
+            justify-content: center;
 
             iframe {
                 width : 100vw;
                 height: 600px;
-
             }
         }
-    }
 
-    .projectDescription {
-        margin: 20px;
+        .projectDescription {
+            margin: 20px;
+        }
     }
 }

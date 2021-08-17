@@ -38,21 +38,23 @@ export default function Home(props) {
             <div key={i} className="project">
               <Link
                 to={{
-                  pathname: "/project",
+                  //have to split and join string to remove all non alphabetical characters for an easier comparison with name in the Project component
+                  pathname: `/project/${project.name.split(/[^A-Za-z]/).join('')}`,
                   state: {
                     name: project.name,
                   },
+                  query: { name: project.name }
                 }}
               >
                 <h4>{project.name}</h4>
-              </Link>
+            
               <div>
-                <div className="top"></div>
                 <img src={getImgPath(project.img)} alt="" />
                 <div className="bottom">
                   <p>Read more about this project</p>
                 </div>
               </div>
+              </Link>
             </div>
           );
         })}

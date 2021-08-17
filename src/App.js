@@ -43,7 +43,7 @@ export default function App() {
             <Route path="/contacts">
               <Contacts />
             </Route>
-            <Route path="/project" component={(props) => <Project {...props} someProp="helloProp" />} >
+            <Route path="/project/:name" component={(props) => <Project {...props} someProp="helloProp" />} >
             </Route>
             <Route path="/">
               <Home />

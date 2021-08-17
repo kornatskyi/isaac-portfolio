@@ -61,32 +61,29 @@
         position: relative;
 
 
-        .top {
-          position        : absolute;
-          background-color: rgba(0, 0, 0, 0.5);
-          height          : 0;
-          width           : 100%;
-          top             : 0px;
-        }
+
 
         .bottom {
           position        : absolute;
           background-color: rgba(0, 0, 0, 0.5);
-          height          : 30px;
+          height          : 50px;
           width           : 100%;
           bottom          : 5px;
-
-
-
+          
 
           p {
-            position: relative;
             color   : rgb(218, 218, 218);
+            text-align: end;
+            margin: 10px;
           }
 
         }
 
-        &:hover {}
+        &:hover {
+
+
+        
+        }
 
 
         img {
