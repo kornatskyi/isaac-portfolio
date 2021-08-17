@@ -7,6 +7,7 @@ import "./Project.scss";
 
 function Project() {
   const { name } = useParams();
+  console.log(name);
   const project = data.projects.find(
     (project) => project.name.split(/[^A-Za-z]/).join("") === name
   );
@@ -26,22 +27,30 @@ function Project() {
       __html: `<iframe src="https://player.vimeo.com/video/${project.id}"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`,
     };
   }
-  return (
-    <div className="projectContainer">
-      <h1 className="title">{project.name}</h1>
-      <div
-        className="videoContainer"
-        dangerouslySetInnerHTML={createMarkup(project)}
-      ></div>
+  if (project) {
+    return (
+      <div className="projectContainer">
+        <h1 className="title">{project.name}</h1>
+        <div
+          className="videoContainer"
+          dangerouslySetInnerHTML={createMarkup(project)}
+        ></div>
 
-      <div className="projectDescription">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt
-        soluta laudantium quasi, alias a. Vero numquam consequatur aut non
-        distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia
-        vitae.
+        <div className="projectDescription">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
+          deserunt soluta laudantium quasi, alias a. Vero numquam consequatur
+          aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio
+          quia vitae.
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div  className="projectContainer">
+        <h1  className="title">404 No such a project</h1>
+      </div>
+    );
+  }
 }
 
 export default Project;

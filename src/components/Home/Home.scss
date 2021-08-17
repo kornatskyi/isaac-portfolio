@@ -29,13 +29,14 @@
       position: relative;
 
       .name {
-        font-weight: 100;
+        font-weight   : 1000;
         letter-spacing: 5px;
-        position  : absolute;
-        bottom    : 150px;
-        width     : 100%;
-        text-align: center;
-        padding   : 10px;
+        position      : absolute;
+        bottom        : 170px;
+        width         : 100%;
+        text-align    : center;
+        padding       : 10px;
+
       }
     }
   }
@@ -67,7 +68,7 @@
         .bottom {
           position        : absolute;
           background-color: rgba(0, 0, 0, 0.5);
-          height          : 50px;
+          height          : 0px;
           width           : 100%;
           bottom          : 5px;
 

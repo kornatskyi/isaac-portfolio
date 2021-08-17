@@ -1,11 +1,11 @@
 
-import React, { useState, useLayoutEffect } from 'react'
+import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 
 import NavBar from './components/Navbar/NavBar.jsx';
@@ -15,7 +15,6 @@ import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contacts from './components/Contacts/Contacts.jsx'
 import Footer from './components/Footer/Footer.jsx';
-
 
 
 
@@ -34,7 +33,7 @@ export default function App() {
 
         </header>
         <div className="mainContainer">
-
+        <ScrollToTop />
           <Switch>
 
             <Route path="/about">
