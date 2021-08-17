@@ -1,7 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.scss";
-import { GiHamburgerMenu } from "react-icons/gi";
+import burger from "../../assets/images/icons/burger.svg";
 
 /**
  * Hook that alerts clicks outside of the passed ref
@@ -23,10 +23,6 @@ function useOutsideAlerter(ref, callback) {
 function NavBar(props) {
   const { pageNames } = props;
 
-
-  
-
-
   //state that keeps name of sidebar class(in or out)
   const [toggleClass, setToggleClass] = useState("");
   const toggleSideBar = () => {
@@ -44,7 +40,7 @@ function NavBar(props) {
 
   return (
     <div className="navbar" ref={wrapperRef}>
-      <GiHamburgerMenu  className="burger" onClick={toggleSideBar} />
+      <img src={burger} className="burger" onClick={toggleSideBar} alt="" />
       <div id="links" className={`links ${toggleClass}`}>
         {pageNames.map((pageName, i) => {
           return (
