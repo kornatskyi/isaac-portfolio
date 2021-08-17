@@ -3,26 +3,26 @@
     "projects": [
         {
             "name": "Chain Reaction",
-            "id":"284758825",
-            "description": "",
+            "id": "284758825",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitae.",
             "img": "719285954_640x360.jpeg"
         },
         {
             "name": "David and Hannah 2019",
-            "id":"308134792",
-            "description": "",
+            "id": "308134792",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitae.",
             "img": "748241451_640x360.jpeg"
         },
         {
             "name": "Earthly",
-            "id":"374043587",
-            "description": "",
+            "id": "374043587",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitae.",
             "img": "832364774_640x360.jpeg"
         },
         {
             "name": "Out of My Mind",
-            "id":"296072500",
-            "description": "",
+            "id": "296072500",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitaeLorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt soluta laudantium quasi, alias a. Vero numquam consequatur aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio quia vitae.",
             "img": "733393503_640x360.jpeg"
         }
     ],
@@ -49,5 +49,4 @@
             "linkedin": "linkedin.com/"
         }
     }
-
 }

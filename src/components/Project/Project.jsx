@@ -37,10 +37,7 @@ function Project() {
         ></div>
 
         <div className="projectDescription">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure
-          deserunt soluta laudantium quasi, alias a. Vero numquam consequatur
-          aut non distinctio architecto. Sunt blanditiis, fugit eius veniam odio
-          quia vitae.
+         {project.description}
         </div>
       </div>
     );
