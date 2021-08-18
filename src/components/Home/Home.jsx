@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Home.scss";
-import video from "../../assets/videos/background.webm";
+import video from "../../assets/videos/background.mp4";
 import data from "../../data.json";
 import { Link } from "react-router-dom";
 
