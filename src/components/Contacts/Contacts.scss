@@ -77,6 +77,8 @@
             color           : white;
             max-width       : 150px;
             cursor          : pointer;
+            -webkit-appearance: none;
+
 
             &:hover {
                 transform       : scale(1.05);
