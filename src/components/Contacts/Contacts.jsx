@@ -14,6 +14,12 @@ import {
 
 export default function Contacts() {
   const [isSending, setIsSending] = useState(false);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [textarea, setTextarea] = useState("");
+
+
   //Change nav links color
   useEffect(() => {
     addRule(".nav-link:after", {
@@ -34,10 +40,15 @@ export default function Contacts() {
     setIsSending(true);
 
     emailjs
-      .sendForm(
+      .send(
         "portfolio",
         "template_8jgfmuf",
-        e.target,
+        {
+          to_name: "Isaac",
+          from_name: name,
+          reply_to: email,
+          message: textarea,
+        },
         "user_zZyJpidmk3ln5DDX8uvhp"
       )
       .then(
@@ -55,19 +66,22 @@ export default function Contacts() {
           console.log(error.text);
         }
       );
+
+    setName("");
+    setEmail("");
+    setTextarea("");
   }
 
   const safeForm = () => {
     if (window.localStorage.isSent === "true") {
       return (
         <form className="contact-form" onSubmit={sendEmail}>
-          <input type="hidden" name="contact_number" />
           <label>Name</label>
-          <input type="text" name="user_name" />
+          <input type="text" name="user_name" value={name}  onChange={(e) => setName(e.target.value)} />
           <label>Email</label>
-          <input type="email" name="user_email" />
+          <input type="email" name="user_email" value={email}  onChange={(e) => setEmail(e.target.value)} />
           <label>Message</label>
-          <textarea name="message" />
+          <textarea name="message" value={textarea}  onChange={(e) => setTextarea(e.target.value)} />
           <input
             className="sent"
             type="submit"
@@ -75,20 +89,33 @@ export default function Contacts() {
             value="Message's sent"
           />
           <p className="clue">
-            *You'll be able to send an another message after 5min
+            *You'll be able to send an another message after 5 min
           </p>
         </form>
       );
     } else {
       return (
         <form className="contact-form" onSubmit={sendEmail}>
-          <input type="hidden" name="contact_number" />
           <label>Name</label>
-          <input type="text" name="user_name" />
+          <input
+            type="text"
+            name="user_name"
+            vvalue={name}
+            onChange={(e) => setName(e.target.value)}
+          />
           <label>Email</label>
-          <input type="email" name="user_email" />
+          <input
+            type="email"
+            name="user_email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <label>Message</label>
-          <textarea name="message" />
+          <textarea
+            name="message"
+            value={textarea}
+            onChange={(e) => setTextarea(e.target.value)}
+          />
           {isSending ? (
             <input className="sending" type="submit" value="Sending" />
           ) : (
