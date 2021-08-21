@@ -52,7 +52,7 @@ export default function Home(props) {
               <div>
                 <img src={getImgPath(project.img)} alt="" />
                 <div className="bottom">
-                  <p>Projects details </p>
+                  <p>Project details</p>
                 </div>
               </div>
               </Link>

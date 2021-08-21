@@ -29,12 +29,12 @@
       position: relative;
 
       .name {
-        font-weight   : 600;
-        position      : absolute;
-        bottom        : 170px;
-        width         : 100%;
-        text-align    : center;
-        padding       : 10px;
+        font-weight: 600;
+        position   : absolute;
+        bottom     : 170px;
+        width      : 100%;
+        text-align : center;
+        padding    : 10px;
 
       }
     }
@@ -58,102 +58,140 @@
         margin-bottom: 10px;
       }
 
-      div {
-        position: relative;
 
 
 
 
+      img {
+        position    : relative;
+        width       : 100%;
+        height      : auto;
+        justify-self: center;
+        z-index     : -1;
+      }
+    }
+
+  }
+}
+
+
+@include mdUp {
+
+  .projectsContainer {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows   : 1fr 1fr;
+    gap                  : 0px 0px;
+    grid-template-areas  :
+      ". ."
+      ". .";
+    margin   : auto;
+    max-width: $max-width;
+    width    : 100%;
+    height   : 100%;
+
+
+
+
+    div {
+      position: relative;
+
+
+
+
+      .bottom {
+        position        : absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        height          : 0px;
+        width           : 100%;
+        bottom          : 5px;
+        height          : 50px;
+        max-height      : 0;
+        transition      : max-height 0.3s ease-out;
+        overflow        : hidden;
+
+        p {
+          color          : rgb(218, 218, 218);
+          text-align     : end;
+          margin         : 10px;
+          text-decoration: underline;
+        }
+
+      }
+
+      &:hover {
         .bottom {
-          position        : absolute;
-          background-color: rgba(0, 0, 0, 0.5);
-          height          : 0px;
-          width           : 100%;
-          bottom          : 5px;
-          height          : 50px;
-          max-height      : 0;
-          transition      : max-height 0.3s ease-out;
-          overflow        : hidden;
+          position           : absolute;
+          background-color   : rgba(0, 0, 0, 0.5);
+          // height          : 50px;
+          bottom             : 5px;
+
+          max-height: 500px;
+          transition: max-height 0.6s ease-in;
+
 
           p {
             color     : rgb(218, 218, 218);
             text-align: end;
             margin    : 10px;
-            text-decoration: underline;
           }
-
         }
 
-        &:hover {
-          .bottom {
-            position           : absolute;
-            background-color   : rgba(0, 0, 0, 0.5);
-            // height          : 50px;
-            bottom             : 5px;
-
-            max-height: 500px;
-            transition: max-height 0.6s ease-in;
-
-
-            p {
-              color     : rgb(218, 218, 218);
-              text-align: end;
-              margin    : 10px;
-            }
-          }
-
-        }
-
-
-
-
-        img {
-          position    : relative;
-          width       : 100%;
-          height      : auto;
-          justify-self: center;
-          z-index     : -1;
-        }
       }
+
+
 
     }
   }
 
+}
 
-  @include mdUp {
+@include mdDown {
 
-    .projectsContainer {
-      display              : grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows   : 1fr 1fr;
-      gap                  : 0px 0px;
-      grid-template-areas  :
-        ". ."
-        ". .";
-      margin   : auto;
-      max-width: $max-width;
-      width    : 100%;
-      height   : 100%;
+  .projectsContainer {
+    display       : flex;
+    flex-direction: column;
+    width         : 100%;
+    height        : 100%;
+    align-items   : center;
 
-      .project {
-        max-width: 600px;
+    div {
+      position: relative;
+
+
+
+
+      .bottom {
+        position        : absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        height          : 0px;
+        width           : 100%;
+        bottom          : 5px;
+        height          : 50px;
+        max-height      : 0;
+        transition      : max-height 0.3s ease-out;
+        overflow        : hidden;
+
+        bottom             : 5px;
+
+        max-height: 500px;
+        transition: max-height 0.6s ease-in;
+
+
+        p {
+          color     : rgb(218, 218, 218);
+          text-align: end;
+          text-decoration: underline;
+          margin    : 10px;
+        }
+
       }
+
+
+
+
+
     }
 
-  }
-
-  @include mdDown {
-
-    .projectsContainer {
-      display       : flex;
-      flex-direction: column;
-      width         : 100%;
-      height        : 100%;
-      align-items   : center;
-
-      .project {
-        max-width: 550px;
-      }
-    }
   }
 }
