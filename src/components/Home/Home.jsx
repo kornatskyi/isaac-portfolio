@@ -3,6 +3,7 @@ import "./Home.scss";
 import video from "../../assets/videos/background.mp4";
 import data from "../../data.json";
 import { Link } from "react-router-dom";
+import {BsPlay} from "react-icons/bs"
 
 import { addRule } from "../../utils/utilFunctions";
 
@@ -52,7 +53,8 @@ export default function Home(props) {
               <div>
                 <img src={getImgPath(project.img)} alt="" />
                 <div className="bottom">
-                  <p>Project details</p>
+                  {/* <p>Project details</p> */}
+                  <BsPlay  />
                 </div>
               </div>
               </Link>

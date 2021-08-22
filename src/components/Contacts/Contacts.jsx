@@ -132,7 +132,6 @@ export default function Contacts() {
 
       <div className="body">
         <div className="contactsColumn">
-          <p>You can reach me by the following contacts:</p>
           <div className="contacts">
             <a href={"mailto:" + data.contact.email}>
               <AiOutlineMail />
@@ -144,23 +143,15 @@ export default function Contacts() {
             </a>
           </div>
           <div className="media">
-            <p>me on social media</p>
-            <a href={data.contact.socialMedia.facebook}>
-              <AiFillFacebook></AiFillFacebook>
-              {data.contact.socialMedia.facebook}
-            </a>
+
             <a href={data.contact.socialMedia.linkedin}>
               <AiFillLinkedin />
               {data.contact.socialMedia.linkedin}
             </a>
-            <a href={data.contact.socialMedia.vimeo}>
-              <FaVimeoV />
-              {data.contact.socialMedia.vimeo}
-            </a>
+
           </div>
         </div>
         <div className="formColumn">
-          <p>or just write me a message in the form below</p>
           {safeForm()}
         </div>
       </div>

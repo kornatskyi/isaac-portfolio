@@ -20,7 +20,7 @@ export default function Footer(props) {
           );
         })}
       </nav>
-      <p className="copyright">© 2021 All rights reserved Issac Waggoner</p>
+      <p className="copyright">© 2021 All rights reserved Isaac Waggoner</p>
     </div>
   );
 }

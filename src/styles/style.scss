@@ -2,6 +2,7 @@
 @import "./_variables.scss";
 @import "_mixins.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 a {
     color          : $dark_font_color;
@@ -13,11 +14,11 @@ a {
 body {
 
     // font-family: 'DosisLight', 'san-serif';
-
-    font-family: 'Poppins', sans-serif;
+font-family: 'Nunito', sans-serif;
+    // font-family: 'Poppins', sans-serif;
     margin     : 0;
     padding    : 0;
-    background-color: hsl(42, 90%, 99%);
+    background-color: white;
     overflow-x: hidden;
     
 

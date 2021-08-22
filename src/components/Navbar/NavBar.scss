@@ -13,6 +13,8 @@
             width  : 60px;
             height : 60px;
             display: flex;
+            z-index: 99999;
+
             .burger {
                 cursor: pointer;
                 margin: auto;
@@ -41,7 +43,7 @@
             flex-direction  : column;
             transform       : translateY(-100%);
             align-items     : center;
-
+    
             .close {
                 width            : 30px;
                 height           : 30px;
@@ -140,11 +142,9 @@
 
             a {
                 font-family: "DosisMedium";
-
                 color          : white;
                 text-decoration: none;
                 @include bottomSlide;
-
                 @include h5;
 
             }
