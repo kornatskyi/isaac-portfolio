@@ -4,9 +4,7 @@ import data from "../../data.json";
 import emailjs from "emailjs-com";
 import "./Contacts.scss";
 
-import { FaVimeoV } from "react-icons/fa";
 import {
-  AiFillFacebook,
   AiFillLinkedin,
   AiOutlinePhone,
   AiOutlineMail,
@@ -144,7 +142,7 @@ export default function Contacts() {
           </div>
           <div className="media">
 
-            <a href={"https://www." + data.contact.socialMedia.linkedin} target="_blank">
+            <a href={"https://www." + data.contact.socialMedia.linkedin} target="_blank" rel="noopener noreferrer">
               <AiFillLinkedin />
               {data.contact.socialMedia.linkedin}
             </a>
