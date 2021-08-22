@@ -144,7 +144,7 @@ export default function Contacts() {
           </div>
           <div className="media">
 
-            <a href={data.contact.socialMedia.linkedin}>
+            <a href={"https://www." + data.contact.socialMedia.linkedin} target="_blank">
               <AiFillLinkedin />
               {data.contact.socialMedia.linkedin}
             </a>
