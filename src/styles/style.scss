@@ -11,6 +11,9 @@ a {
 }
 
 
+
+
+
 body {
 
     // font-family: 'DosisLight', 'san-serif';
@@ -20,8 +23,13 @@ font-family: 'Nunito', sans-serif;
     padding    : 0;
     background-color: white;
     overflow-x: hidden;
-    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 
+    &::-webkit-scrollbar {
+        display: none;
+
+    }
 }
 
 header {
