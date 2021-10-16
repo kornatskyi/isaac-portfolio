@@ -30,6 +30,12 @@
             "id": "284758825",
             "description": "A short film with a darkly comedic twist.",
             "img": "719285954_640x360.jpeg"
+        },
+        {
+            "name": "Carl",
+            "id": "633207073",
+            "description": "Proof of concept first scene for a larger script.",
+            "img": "1275602132-fc8e5b06e2b3eb574329958c830eef5d028029b83c108743f_640x360.jpeg"
         }
     ],
     "about": {
@@ -37,7 +43,7 @@
         "body": [
             {
                 "title": "",
-                "text": "I'm a video producer from Brooklyn in search of a position in-house. I am looking to join a team that is dedicated to creating high quality and impactful content. I am dedicated to every aspect of the craft and I will bring that dedication to any project I get to be a part of."
+                "text": "I'm a storyteller seeking to create innovative and thoughtful films that expand my skill set and showcase my passions. In the past four years producing, directing, and editing films I've developed leadership skills and a passion for collaboration through my various roles within other projects. The process of bringing meaningful stories to life alongside a team of peers in order to then share that connection motivates my love of film and continued dedication to filmmaking. "
             }
         ]
     },
@@ -46,7 +52,6 @@
         "email": "isaac.wagg@gmail.com",
         "phoneNumber": "425.286.0835",
         "socialMedia": {
-          
             "linkedin": "linkedin.com/in/isaacwaggoner/"
         }
     }
