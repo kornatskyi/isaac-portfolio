@@ -8,7 +8,7 @@ import {BsPlay} from "react-icons/bs"
 import { addRule } from "../../utils/utilFunctions";
 
 const getImgPath = (imgName) => {
-  return require("../../assets/images/projects/" + imgName).default;
+  return require("../../assets/images/projects/" + imgName);
 };
 
 export default function Home(props) {
@@ -21,7 +21,6 @@ export default function Home(props) {
       color: "white !important",
     });
     document.querySelector(".burger").style.color = "white";
-
   }, []);
 
   return (
@@ -41,22 +40,23 @@ export default function Home(props) {
               <Link
                 to={{
                   //have to split and join string to remove all non alphabetical characters for an easier comparison with name in the Project component
-                  pathname: `/project/${project.name.split(/[^A-Za-z]/).join('')}`,
+                  pathname: `/project/${project.name
+                    .split(/[^A-Za-z]/)
+                    .join("")}`,
                   state: {
                     name: project.name,
                   },
-                  query: { name: project.name }
+                  query: { name: project.name },
                 }}
               >
                 <h4>{project.name}</h4>
-            
-              <div>
-                <img src={getImgPath(project.img)} alt="" />
-                <div className="bottom">
-                  {/* <p>Project details</p> */}
-                  <BsPlay  />
+                <div>
+                  <img src={getImgPath(project.img)} alt="" />
+                  <div className="bottom">
+                    {/* <p>Project details</p> */}
+                    <BsPlay />
+                  </div>
                 </div>
-              </div>
               </Link>
             </div>
           );
